@@ -1,0 +1,37 @@
+[06:03, 9/14/2017] Ferny ❤: Hello baby felt sleep and woke up just to remind you how awesome and bella and sexy and smart and amazing you are
+
+[09:40, 9/14/2017] Giuggy ❤: I love you                        
+[09:40, 9/14/2017] Giuggy ❤: ❤                        
+[11:38, 9/14/2017] Ferny ❤: me too <3                        
+
+
+
+1) Preprocessing
+	- Analyze number of NA per column
+		* Decide a fill NA strategy if you want.
+	- Methods for feature selection
+	- Manage categorical variables for regression
+		* Create dummies variables
+	- Finding outliers (if you want) this is actually selecting rows
+	- Create new variables using the ones we have
+		* Create a set of functions Phi(c) -> R1
+2) Building model
+	- Select the algorithm
+		o lightGBM https://github.com/Microsoft/LightGBM
+		o xlgboost https://xgboost.readthedocs.io/en/latest/
+			- You need to know a little bit of boosting.
+			- Probably read a little bit of the documentation.
+		* "Our" own model (Lasso, ridge or normal linear regression)
+			- Lasso is min Sum(yi - beta*X)^2 + lambda norm1(beta)
+			- Ridge is min Sum(yi - beta*X)^2 + lambda norm2(beta)
+				Regularizaton path for this cases
+			- Normal is min sum(yi - beta*X)^2
+			** Actually there are implementations in scikit-learn
+	- Select the best model using CV or normal train/test.
+3) Proving model
+	- Confusion matrix
+	- Regularization path in the case of Ridge and Lasso
+	- Plots with the model over the data
+4) Kaggle shit
+	Submit to the kaggle page
+		* Create the output of the page
